@@ -1,0 +1,23 @@
+Customers
+	id (pr)
+	first_name
+	last_name 
+	address
+	phone_number 
+	total_cart_price 
+
+Cart items :
+	id (pr) 
+	customer_id (fk)
+	product_id (fk)
+	quantity
+
+Categories:
+	id (pr)
+	category_name
+
+Products :
+	id (pr)
+	product_name
+	product_description
+	category (fk)
