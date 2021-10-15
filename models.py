@@ -3,20 +3,20 @@ from os.path import join, dirname
 from dotenv import load_dotenv
 
 import os
-
 import psycopg2
+
 # heroku database
-# DATABASE_URL = os.environ['DATABASE_URL']
-# if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
-    # DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
-# conn = psycopg2.connect(DATABASE_URL, sslmode='require')
+DATABASE_URL = os.environ['DATABASE_URL']
+if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
+conn = psycopg2.connect(DATABASE_URL, sslmode='require')
 
 
-# local
-dotenv_path = join(dirname(__file__), '.env')
-load_dotenv(dotenv_path)
-LOCAL_DATABASE_URL = os.environ.get("LOCAL_DATABASE_URL")
-DATABASE_URL = LOCAL_DATABASE_URL
+# # local
+# dotenv_path = join(dirname(__file__), '.env')
+# load_dotenv(dotenv_path)
+# LOCAL_DATABASE_URL = os.environ.get("LOCAL_DATABASE_URL")
+# DATABASE_URL = LOCAL_DATABASE_URL
 
 print('database url ---------> ', DATABASE_URL)
 

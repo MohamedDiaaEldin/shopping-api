@@ -11,4 +11,4 @@ migrate  = Migrate(app=app, db=db)
 
 @app.route('/')
 def index():
-  return 'from index'
+  return 'From Index'
