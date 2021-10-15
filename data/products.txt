@@ -1,0 +1,10 @@
+gammig leptop, 1, core i7 8 ram - amd 4 gb, 1, 12000
+Dell leptop, 1, core i7 16 ram - amd 4 gb, 2, 11800
+T-shirt, 3, red - cotton, 3, 50.75
+samsung, 2, 64 gb 3 ram, 4, 3000
+shawmi, 2, 16 gb 2 ram, 5, 2800
+huwawi, 2, 64 gb 1 ram, 6, 3200
+samsung s12, 2, 64 gb 4 ram, 7, 5000
+blackberry, 2, 16 gb 3 ram, 8, 2900
+blackberry, 2, 16 gb 2 ram, 9, 2500
+sumsung, 4, 16.5 insh tv - HD, 10, 25000

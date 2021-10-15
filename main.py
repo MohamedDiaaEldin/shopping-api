@@ -12,3 +12,17 @@ migrate  = Migrate(app=app, db=db)
 @app.route('/')
 def index():
   return 'From Index'
+
+
+
+@app.route('/products')
+def get_products():
+  try:
+    return jsonify({
+      'status_code' : 200 ,
+      'success' : True,
+      'products' : [p.get_product_object() for p in Product.query.all()]
+    })
+  except :
+    print('error while getting all products')
+    return abort(500)

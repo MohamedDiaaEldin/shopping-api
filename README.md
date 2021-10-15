@@ -9,15 +9,21 @@ One PATCH request
 
 One DELETE request
 
-/products                                               GET
 
+
+/products                                     GET
 /products/<int:category_id>                   GET
 
-/customers/<int:customer_id>/items     GET   returns a list of cart items for a user
 
-/categories                                            GET
+/customers/<int:customer_id>/items            GET   returns a list of cart items for a user
+/customers/<int:customer_id>                  GET
 
-/customers/<int:customer_id>               GET
+/categories                                   GET
+
+
+
+
+
 
 /product                                                POST   (admin and product_admin roles)
 
