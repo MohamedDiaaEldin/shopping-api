@@ -4,7 +4,8 @@ first_customer = Customer(first_name='mohamed', last_name='diaa', address='6th o
                            phone='012744444', total_price=0.0)
 
 category = Category(category_name='laptops')
-product = Product(product_name='gammig leptop' , product_description='core i7 - 8 ram - amd 4 gb' , category_id=1)
+
+product = Product(product_name='gammig leptop' , product_description='core i7 - 8 ram - amd 4 gb' , category_id=1, price=22.6)
 cart_item = CartItem(quantity=1, product_id=2, customer_id=1)
 
 db.session.add(first_customer)

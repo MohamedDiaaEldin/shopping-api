@@ -32,12 +32,16 @@ One DELETE request
 /customer                                             POST
 
 /product                                                POST
+-----------
 
 /customer/<int:customer_id>               PATCH
 
 /product/<int:product_id>                     PATCH   (admin and  product_admin roles)
 
 /category/<id:category_id>                  PATCH   (admin role)
+
+
+
 
 /customer/<int:customer_id>               DELETE
 

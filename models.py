@@ -1,7 +1,6 @@
 from flask_sqlalchemy import SQLAlchemy 
 from os.path import join, dirname
 from dotenv import load_dotenv
-
 import os
 import psycopg2
 
@@ -18,13 +17,14 @@ load_dotenv(dotenv_path)
 LOCAL_DATABASE_URL = os.environ.get("LOCAL_DATABASE_URL")
 DATABASE_URL = LOCAL_DATABASE_URL
 
-print('database url ---------> ', DATABASE_URL)
+# print('database url ---------> ', DATABASE_URL)
 
 
 
 db = SQLAlchemy()
 
-def setup_db(app):
+def setup_db(app, DATABASE_URL=DATABASE_URL):
+    print('database url ----->> ', DATABASE_URL)
     app.config["SQLALCHEMY_DATABASE_URI"] = DATABASE_URL
     app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
     db.app = app
@@ -60,16 +60,20 @@ class Category(db.Model):
     category_name = Column(String, nullable=False)
     products = db.relationship('Product', backref='category')
 
-    def get_catgory_object(self):
+    def get_category_object(self):
         return {
-            'category_id' : self.id,
-            'category_name' : self.name
+            'category_id' : self.id ,
+            'category_name' : self.category_name
         }
     
     def add_to_database(self):
         db.session.add(self)
         db.session.commit()
 
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
+        
 class Product(db.Model):
     id = Column(Integer, primary_key=True)
     product_name = Column(String, nullable=False)    
@@ -92,6 +96,9 @@ class Product(db.Model):
         db.session.add(self)
         db.session.commit()
 
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
 
 class Customer(db.Model):
     id = Column(db.Integer, primary_key=True)
@@ -117,6 +124,12 @@ class Customer(db.Model):
         db.session.add(self)
         db.session.commit()
 
+    def update(self):
+        db.session.commit()
+
+    def delete(self):
+        db.session.delete(self)
+        db.session.commit()
         
 
 class CartItem(db.Model):

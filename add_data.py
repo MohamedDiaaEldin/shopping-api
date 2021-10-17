@@ -49,6 +49,11 @@ def add_cart_item():
         customer_id = data[3].strip()
         item = CartItem(id=item_id, quantity=quantity, product_id=product_id, customer_id=customer_id)
         item.add_to_database()
+        ## update customer total price 
+        customer = Customer.query.get(customer_id)
+        customer.total_price += int(quantity) * Product.query.get(product_id).price
+        customer.update()
+
 
 
 '''
@@ -66,4 +71,4 @@ you should add products and customer before cart_item
 # add_customers()
 
 #fourth 
-# add_cart_item()
+add_cart_item()
