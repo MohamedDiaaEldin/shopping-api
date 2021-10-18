@@ -23,7 +23,7 @@ One DELETE request
 
 
 
-
+/item   POST
 
 /product                                                POST   (admin and product_admin roles)
 
@@ -32,24 +32,24 @@ One DELETE request
 /customer                                             POST
 
 /product                                                POST
------------
+
 
 /customer/<int:customer_id>               PATCH
-
-/product/<int:product_id>                     PATCH   (admin and  product_admin roles)
-
-/category/<id:category_id>                  PATCH   (admin role)
-
-
-
+/product/<int:product_id>                 PATCH                 (adminandproduct_adminroles)
+/category/<id:category_id>                PATCH   (admin role)
 
 /customer/<int:customer_id>               DELETE
 
+
 /item/<int:item_id>                               DELETE
+----------------------------------
 
 /product/<int:product_id>                     DELETE  (admin role, product_admin roles)
 
 /category/<int:category_id>                 DELETE  (admin role)
+
+
+
 
 roles and test requirements 
 

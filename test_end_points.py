@@ -1,5 +1,8 @@
-from itertools import dropwhile
+import re
+from time import sleep
 import unittest
+
+from werkzeug.test import Client
 from main import app , CartItem , Category , Customer , Product , db
 import json
 
@@ -47,7 +50,6 @@ class ShoppingTest(unittest.TestCase):
         self.assertTrue(data['success'])
         self.assertEqual(data['customer']['first_name'], 'Mohamed')
         self.assertEqual(data['customer']['last_name'], 'Diaa')
-        self.assertEqual(data['customer']['total_price'], 36800.0)
         
     def test_failures_get_customer_by_id(self):
         res = self.client().get('/customers/1000')
@@ -80,7 +82,7 @@ class ShoppingTest(unittest.TestCase):
         self.assertTrue(len(data['categories']) > 0)
         self.assertEqual(data['categories'][0]['category_id'] ,  1)
         self.assertEqual(data['categories'][0]['category_name'] ,  'laptop')
-
+        
     '''
      post product test 
     '''
@@ -96,7 +98,8 @@ class ShoppingTest(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['status_code'], 200)
         self.assertTrue(data['success'])
-        # check for new added product and delete it from database 
+        # get new added product
+        # delete it
         try:
             new_added = self.Product.query.filter_by(product_name='short-for-test').all()[0]
             self.assertEqual(new_added.product_name, 'short-for-test')
@@ -130,7 +133,9 @@ class ShoppingTest(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['status_code'], 200)
         self.assertTrue(data['success'])
-        # check for new added category and delete it from database 
+
+        # get new added category 
+        # delete it
         try:
             new_added = self.Category.query.filter_by(category_name='category-for-test').all()[0]            
             self.assertEqual(new_added.category_name, 'category-for-test')
@@ -165,8 +170,10 @@ class ShoppingTest(unittest.TestCase):
         self.assertEqual(res.status_code, 200)
         self.assertEqual(data['status_code'], 200)
         self.assertTrue(data['success'])
-        try:
 
+        ## get new added customer 
+        # delete it
+        try:
             new_added = self.Customer.query.filter_by(first_name=first_name).all()[0]
             self.assertEqual(new_added.first_name, first_name)
             new_added.delete()
@@ -186,6 +193,109 @@ class ShoppingTest(unittest.TestCase):
         self.assertEqual(data['message'], 'unprocessable entity')
         self.assertEqual(data['status_code'], 422)
 
+
+    def test_patch_customer(self):        
+        new_phone = "01111111111" 
+        customer = {
+            "first_name": 'Mohamed' ,
+            "last_name": "Diaa" ,
+            "address":"October city" ,
+            "phone" : new_phone ## this will be chancged
+        }
+
+        res = self.client().patch('/customers/1', data=json.dumps(customer), content_type='application/json')
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(data['status_code'], 200)
+        self.assertTrue(data['success'])
+        ## get new updated customer 
+        try:
+            new_updated = self.Customer.query.get(1)
+            self.assertEqual(new_updated.phone, new_phone)
+        except:            
+            print('error while getting new updated customer')            
     
+    def test_failures_patch_customer(self):
+        new_phone = "012212121" 
+        customer = {
+            "first_name": 'Mohamed' ,
+            "last_name": "Diaa" ,
+            "address":"October city" ,
+            "phone_number" : new_phone  ## wrong key
+        }
+        res = self.client().patch('/customers/1', data=json.dumps(customer), content_type='application/json')
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 422)
+        self.assertEqual(data['message'], 'unprocessable entity')
+        self.assertEqual(data['status_code'], 422)
+
+    def test_patch_product(self):
+        product = {
+            "product_name":"T-shirt",
+             "product_description":"red - cotton", 
+             "category_id":3, 
+             "price":100  ## change is here
+            }
+        res = self.client().patch('/products/3', data=json.dumps(product), content_type='application/json')
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 200)
+        self.assertEqual(data['status_code'], 200)
+        self.assertTrue(data['success'])
+        try:
+            new_updated = self.Product.query.get(3)
+            self.assertEqual(new_updated.price, 100)
+        except:
+            print('error while geting new updated product')
+
+    def test_failures_patch_product(self):
+        product = {
+            "product_name":"short-for-test",
+            "product_description":"white short", 
+            "category_number":3,  # wrong key
+            "price":75
+        }
+        res = self.client().patch('/products/13', data=json.dumps(product), content_type='application/json')
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 422)
+        self.assertEqual(data['message'], 'unprocessable entity')
+        self.assertEqual(data['status_code'], 422)
+
+
+    # this test depends on post customer and post cart item 
+    def test_delete_customer(self):
+        # add customer
+        customer = {
+            "first_name": "ahmed test" ,
+            "last_name": "ali test" ,
+            "address":"Giza" ,
+            "phone" : "012222453"
+        }
+        res = self.client().post('/customer', data=json.dumps(customer), content_type='application/json')
+        self.assertEqual(res.status_code, 200)
+        
+        new_added_customer = self.Customer.query.filter_by(first_name='ahmed test').all()[0]
+        new_customer_id = new_added_customer.id
+        ## add cart item
+        cart_item = {
+            "product_id" : 50,
+            "customer_id" : new_customer_id,
+            "quantity" : 1  
+        }        
+        res = self.client().post('/item', data=json.dumps(cart_item), content_type='application/json')
+        self.assertEqual(res.status_code, 200) 
+        # test delete customer 
+        res = self.client().delete(f'/customers/{new_customer_id}')
+        data = json.loads(res.data)        
+        self.assertEqual(res.status_code, 200)        
+        self.assertEqual(data['status_code'], 200)
+        self.assertEqual(data['success'], True)
+
+    def test_failures_delete_customer(self):
+        res = self.client().delete('/customers/1000') ## not found id
+        data = json.loads(res.data)
+        self.assertEqual(res.status_code, 404)
+        self.assertEqual(data['status_code'], 404)        
+        self.assertEqual(data['message'], 'not found')        
+        
 if __name__ == '__main__':
     unittest.main()

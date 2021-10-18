@@ -74,6 +74,9 @@ class Category(db.Model):
         db.session.delete(self)
         db.session.commit()
         
+    def update(self):
+        db.session.commit()
+
 class Product(db.Model):
     id = Column(Integer, primary_key=True)
     product_name = Column(String, nullable=False)    
@@ -95,7 +98,9 @@ class Product(db.Model):
     def add_to_database(self):
         db.session.add(self)
         db.session.commit()
-
+    def update(self):
+        db.session.commit()
+        
     def delete(self):
         db.session.delete(self)
         db.session.commit()
@@ -149,4 +154,8 @@ class CartItem(db.Model):
     
     def add_to_database(self):
         db.session.add(self)
+        db.session.commit()
+    
+    def delete(self):
+        db.session.delete(self) 
         db.session.commit()
