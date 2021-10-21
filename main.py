@@ -12,13 +12,14 @@ migrate  = Migrate(app=app, db=db)
 
 @app.route('/')
 def index():
-  return 'From Index'
+  # return 'From Index'
+  return redirect('index.html')
 
 @app.route("/login")
 def starting_url():
     return redirect("https://ud-cap.us.auth0.com/authorize?audience=shoping&response_type=token&client_id=Bzzt293Q1XzEneTf6lt4DONzvVrrUoUX&redirect_uri=https://shopping-cap.herokuapp.com/login-results")
 
-@app.route('/login-results', methods=['POST'])
+@app.route('/login-results')
 def login_results():
   json_body = request.get_json()
   if json_body != None:
