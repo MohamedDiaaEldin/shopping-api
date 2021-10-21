@@ -62,13 +62,13 @@ you should add products and customer before cart_item
 
 '''
 #first 
-# add_categories()
+add_categories()
 
 #second
-# add_products()
+add_products()
 
 # third 
-# add_customers()
+add_customers()
 
 #fourth 
 add_cart_item()

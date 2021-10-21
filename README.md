@@ -42,11 +42,13 @@ One DELETE request
 
 
 /item/<int:item_id>                               DELETE
-----------------------------------
+
 
 /product/<int:product_id>                     DELETE  (admin role, product_admin roles)
 
 /category/<int:category_id>                 DELETE  (admin role)
+
+----------------------------------
 
 
 

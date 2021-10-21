@@ -22,3 +22,10 @@ def handle_not_found_error(e='not found'):
             'message' : e,
             'status_code' : 404
     }),404
+
+@app.errorhandler(501)
+def handel_not_implemented_error(e='not implemented'):
+        return jsonify({
+                'message' : e , 
+                'status_code' : 501
+        }), 501
