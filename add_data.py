@@ -1,5 +1,4 @@
-from operator import add
-from  main import Category , CartItem , Product , Customer , db
+from  main import Category , CartItem , Product , Customer 
 
 
 def add_products():
