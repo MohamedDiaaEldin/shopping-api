@@ -16,8 +16,19 @@ def index():
   return redirect('index.html')
 
 @app.route("/login")
-def starting_url():
+def login():
     return redirect("https://ud-cap.us.auth0.com/authorize?audience=shoping&response_type=token&client_id=Bzzt293Q1XzEneTf6lt4DONzvVrrUoUX&redirect_uri=https://shopping-cap.herokuapp.com/login-results")
+
+@app.route("/logout-page")
+def logout_page():
+    logout_url = "https://ud-cap.us.auth0.com/logout? client_id=Bzzt293Q1XzEneTf6lt4DONzvVrrUoUX&returnTo=https://shopping-cap.herokuapp.com/logout"    
+    return redirect(logout_url)
+@app.route('/logout')
+def logout():
+  return jsonify({
+    'success' : True ,
+    'message' : 'logout'
+  })
 
 @app.route('/login-results')
 def login_results():
