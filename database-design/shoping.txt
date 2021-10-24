@@ -20,4 +20,5 @@ Products :
 	id (pr)
 	product_name
 	product_description
+	price
 	category (fk)
