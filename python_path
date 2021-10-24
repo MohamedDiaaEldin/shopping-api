@@ -1,0 +1,1593 @@
+{
+	"info": {
+		"_postman_id": "b729bfb7-d86a-4556-8751-fdd0145f8c1e",
+		"name": "shopping -api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "public - dev",
+			"item": [
+				{
+					"name": "get products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products/5",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get customer cart items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customers/1/items",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customers",
+								"1",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"ahmed test\" ,\n    \"last_name\": \"ali test\" ,\n    \"address\":\"Giza\" ,\n    \"phone\" : \"012222453\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customer",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"product_name\" : \"jacket test\",\n    \"product_description\" : \"black - blue tomi teshirt -  test\",\n    \"category_id\" : 3,\n    \"price\" : 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/product",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category_name\" : \"Home\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/category",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category_name\" : \"Cloth\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/categories/3",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"ahmed test\" ,\n    \"last_name\": \"ali test\" ,\n    \"address\":\"Giza\" ,\n    \"phone\" : \"00000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customers/7",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customers",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"product_name\" : \"tomi shirt test\",\n    \"product_description\" : \"black - blue tomi teshirt -  test\",\n    \"category_id\" : 3,\n    \"price\" : 280\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products/15",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post cart item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\" : 3,\n    \"customer_id\" : 2,\n    \"quantity\" : 1  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/item",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customers/7",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customers",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cart item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/items/4",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"items",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products/1000",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTUyNjcxMTg0MDkyNjQ4NDk0OTciLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5Njg0LCJleHAiOjE2MzUwODY4ODQsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6W119.WDM6deuYGsI3-mQVadwPi0C6hbY6xzMiv0n5IisAoxA_wYtx-Iu5HHAiXtH830dCUdLP9Ex3YZw1rGchcbDM6Tzzo4wyUyStPCVQ1lzxbNNocjKBRwgsQuwXm1YAl9f0TfYCTRn1JJoaawVU5v355KI4Bhg20XMmreNmwpzKTTg_b7N6tl99YsIoTMGX2gMhGBfpZwGAygyO_fXtSoVwSuBmxYIg8voPFKZhkJ2NgoP4M2pbkaFUvtJcwo5JOr-owrf7RVTS3R--5Z1ia1nns2CSJx07naGBjjJ7qthrLApedsW-MjFbc1QOZ-DzNLldOPbjpt3SiYYBSPlLoLEyVQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/categories/5",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "product admin role",
+			"item": [
+				{
+					"name": "get products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products/5",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get customer cart items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customers/1/items",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customers",
+								"1",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"ahmed test\" ,\n    \"last_name\": \"ali test\" ,\n    \"address\":\"Giza\" ,\n    \"phone\" : \"012222453\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customer",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"product_name\" : \"jacket test\",\n    \"product_description\" : \"black - blue tomi teshirt -  test\",\n    \"category_id\" : 3,\n    \"price\" : 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/product",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category_name\" : \"Home\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/category",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category_name\" : \"Cloth\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/categories/3",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"ahmed test\" ,\n    \"last_name\": \"ali test\" ,\n    \"address\":\"Giza\" ,\n    \"phone\" : \"00000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customers/7",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customers",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"product_name\" : \"tomi shirt test\",\n    \"product_description\" : \"black - blue tomi teshirt -  test\",\n    \"category_id\" : 3,\n    \"price\" : 280\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products/15",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post cart item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\" : 3,\n    \"customer_id\" : 2,\n    \"quantity\" : 1  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/item",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customers/7",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customers",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cart item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/items/4",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"items",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products/1000",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/categories/5",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Admin role",
+			"item": [
+				{
+					"name": "get products",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get product by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products/5",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get customer cart items",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customers/1/items",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customers",
+								"1",
+								"items"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/categories",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"ahmed test\" ,\n    \"last_name\": \"ali test\" ,\n    \"address\":\"Giza\" ,\n    \"phone\" : \"012222453\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customer",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"product_name\" : \"jacket test\",\n    \"product_description\" : \"black - blue tomi teshirt -  test\",\n    \"category_id\" : 3,\n    \"price\" : 100\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/product",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category_name\" : \"Home\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/category",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category_name\" : \"Cloth\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/categories/3",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"first_name\": \"ahmed test\" ,\n    \"last_name\": \"ali test\" ,\n    \"address\":\"Giza\" ,\n    \"phone\" : \"00000000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customers/7",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customers",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "patch product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{    \n    \"product_name\" : \"tomi shirt test\",\n    \"product_description\" : \"black - blue tomi teshirt -  test\",\n    \"category_id\" : 3,\n    \"price\" : 280\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products/15",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"15"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "post cart item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_id\" : 3,\n    \"customer_id\" : 2,\n    \"quantity\" : 1  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/item",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"item"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete customer",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/customers/7",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"customers",
+								"7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete cart item",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/items/4",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"items",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete product",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/products/1000",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"products",
+								"1000"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete category",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://shopping-cap.herokuapp.com/categories/5",
+							"protocol": "https",
+							"host": [
+								"shopping-cap",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"categories",
+								"5"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
