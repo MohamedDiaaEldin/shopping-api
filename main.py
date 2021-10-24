@@ -1,5 +1,4 @@
-from os import PRIO_PGRP
-from flask import Flask , jsonify , abort  , request , redirect
+from flask import Flask , jsonify , abort  , request , redirect , send_file
 from flask_migrate import Migrate
 from flask_cors import CORS
 from models import Product , Category,  CartItem , Customer , setup_db
@@ -399,3 +398,13 @@ def delete_category(jwt, category_id):
     db.session.rollback()
     print('error while deleting category')
     return handle_internal_server_error()
+
+
+
+
+
+## read me
+@app.route('/get_database')
+def get_image():    
+    filename = 'database-design/database.png'    
+    return send_file(filename, mimetype='image/png')
