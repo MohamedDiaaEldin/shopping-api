@@ -2,6 +2,10 @@
 
 # Shopping - Store
 
+## Domain Name
+
+[https://shopping-cap.herokuapp.com/](https://shopping-cap.herokuapp.com/)
+
 ## End Points
 
 - GET / redirect to login page
