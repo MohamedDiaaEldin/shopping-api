@@ -17,8 +17,6 @@ if DATABASE_URL and DATABASE_URL.startswith("postgres://"):
 # LOCAL_DATABASE_URL = os.environ.get("LOCAL_DATABASE_URL")
 # DATABASE_URL = LOCAL_DATABASE_URL
 
-# # print('database url ---------> ', DATABASE_URL)
-
 
 
 db = SQLAlchemy()
@@ -98,6 +96,7 @@ class Product(db.Model):
     def add_to_database(self):
         db.session.add(self)
         db.session.commit()
+
     def update(self):
         db.session.commit()
         
