@@ -21,7 +21,7 @@ def login():
 
 @app.route("/logout")
 def logout_page():
-    logout_url = "https://ud-cap.us.auth0.com/logout?client_id=Bzzt293Q1XzEneTf6lt4DONzvVrrUoUX&returnTo=https://shopping-cap.herokuapp.com/logout"    
+    logout_url = "https://ud-cap.us.auth0.com/logout?client_id=Bzzt293Q1XzEneTf6lt4DONzvVrrUoUX&returnTo=https://shopping-cap.herokuapp.com/logout-page"    
     return redirect(logout_url)
 
 @app.route('/logout-page')
