@@ -1,87 +1,70 @@
-# README
+## Installation
 
-# Shopping - Store
+### Requirements
 
-## Domain Name
+- Python 3.x
+- PostgreSQL
 
-[https://shopping-cap.herokuapp.com/](https://shopping-cap.herokuapp.com/)
+### Backend Setup
 
-## End Points
+1. **Clone the repository:**
+    ```bash
+    git clone <repository-url>
+    cd shopping-store-api
+    ```
 
-- GET / redirect to login page
-- GET /login login using auth0
-- GET /logout logout using auth0
-- GET /products get all products /
-- GET /products/
-- GET /customers/<int:customer_id
-- GET /customers/int:customer_id/items gets cart item for a user
-- GET /categories
-- POST /item
-- POST /product
-- POST /category
-- POST /customer
-- PATCH /customers/
-- PATCH /products/
-- PATCH /categories/
-- DELETE /customers/
-- DELETE /items/
-- DELETE /products/
-- DELETE /categories/
+2. **Create a virtual environment:**
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # For Unix/Mac
+    venv\Scripts\activate  # For Windows
+    ```
 
----
+3. **Install dependencies:**
+    ```bash
+    pip install -r requirements.txt
+    ```
 
-## Roles and Permission
+4. **Set up the database:**
+    - Create a PostgreSQL database and configure the connection in `config.py`.
 
-- dev - public
-    - GET /products get all products /
-    - GET /products/
-    - GET /customers/<int:customer_id
-    - GET /customers/int:customer_id/items gets cart item for a user
-    - GET /categories
-    - POST /item
-    - POST /customer
-    - PATCH /customers/
-    - DELETE /customers/
-- product admin role
-    - all dev - public end points
-    - POST /product
-    - PATCH /products/
-    - DELETE /products/
-- Admin
-    - all dev - public end points
-    - all product - admin end proints
-    - POST /category
-    - PATCH /categories/
-    - DELETE /categories/
-    
+5. **Run Flask application:**
+    ```bash
+    flask run
+    ```
 
----
+## Endpoints
 
-Postman test end points in shopping -api.postman_collection.json file
+The API supports the following endpoints:
 
-product role JWT :
+- `GET /login`: Login using Auth0 authentication.
+- `GET /logout`: Logout using Auth0.
+- `GET /products`: Retrieve all products.
+- `GET /customers/<int:customer_id>`: Retrieve a specific customer.
+- `POST /item`: Create a new item.
+- ... (and more)
 
-eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTMwMTczNzI2Mzc3ODA3MjMyNjIiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDc5OTM1LCJleHAiOjE2MzUwODcxMzUsImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6cHJvZHVjdCIsInBhdGNoOnByb2R1Y3QiLCJwb3N0OnByb2R1Y3QiXX0.Iibnb6_T3lzGwfW23yxil0ePrsT5JqQ4pl0Svx1Eliy4VUP1XNwUKeu3SJysOQcrg1vQo_uOGChBgCjLtskHP7cVbwNFzw3igM1tEBNHLEEeJ77iZBr4pOdB7RyOK_MYMCakjWZImDltysydJRLFIZ8rtuBiTNL9QeZjr2kLdit_nVYxH-7K0lDZ8uQh6kuChoeB63lyj9RgE7PXsvRdiVFx63mibFMU6GSNRXGM2NblNfpUxWfgIC3oIM-S0qxgMMdpngL3RBHbvS30qOYi3DNe5jJoRtelxnozTcgl477Bp2saQ4yk-yCwv5RJrccX8hG1_vFt8stC5QCrC5Rw0A
+## Roles and Permissions
 
-Admin JWT :
+- **dev - public**:
+  - Limited access for basic functionalities.
+- **product admin role**:
+  - Access to product-related functionalities.
+- **Admin**:
+  - Full access to all functionalities.
 
-eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IkNiLV82dmRxTXJ4YUxLV0hKWHRkZyJ9.eyJpc3MiOiJodHRwczovL3VkLWNhcC51cy5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMTEyMzExMDM3Nzk1ODI2OTIzNDYiLCJhdWQiOiJzaG9waW5nIiwiaWF0IjoxNjM1MDgwMjg5LCJleHAiOjE2MzUwODc0ODksImF6cCI6IkJ6enQyOTNRMVh6RW5lVGY2bHQ0RE9OenZWcnJVb1VYIiwic2NvcGUiOiIiLCJwZXJtaXNzaW9ucyI6WyJkZWxldGU6Y2F0ZWdvcnkiLCJkZWxldGU6cHJvZHVjdCIsInBhdGNoOmNhdGVnb3J5IiwicGF0Y2g6cHJvZHVjdCIsInBvc3Q6Y2F0ZWdvcnkiLCJwb3N0OnByb2R1Y3QiXX0.EFXoMH2UKHaRFtqAqCWLiP9hRPrCVBF6Xsjwzg9p4DYwwNpfT3L03JwwhyNADi2ORF5FWPN7LOOJHYgKOrZ9rFnJO6zmUbcWv9w1jRm7UUAklOML1AAuqEXOdTsFoyhjnDPOMPZ6JSsDabvcXhHxaUCcPvzSQgYRqO3bK8lTP4yEt_PLHN6JGqygKrgIJUuJafIRahHqT5iiGnIUWSP-udtSXZ7WYCJ1Rg2qkDNL5dazlHQrIekQ-MMN9bvBTfUld587_ok_7IihdCpk94R7it1MVCQ0oM-PCWC2CY-zZupsuA29N4zvPVyAfmeJRcj0xVYz4TcyhoBtbT-BXPV9pw
+## Postman Collection
 
----
+Use the [shopping-api.postman_collection.json](./shopping%20-api.postman-v2_collection.json) file to test endpoints in Postman.
 
-test_end_points.py File :
+## JWT Tokens
 
-unit test for success and failure for each end point
+- **Product Role JWT**: [Token required]
+- **Admin JWT**: [Token required]
 
----
+## Testing
 
-add_data.py File :
+The [test_end_points.py](./test_end_points.py) file contains unit tests for success and failure scenarios for each endpoint.
 
-- to be able to run end point unit test
-- fill database with data
-
----
-
-/database-design/database.png :
-
-database design
+## Database Design
+See [database.png](./database-design/database.png) for the database design.
