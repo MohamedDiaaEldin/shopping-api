@@ -1,9 +1,21 @@
-## Installation
+# Project Setup Guide
 
-### Requirements
 
-- Python 3.x
-- PostgreSQL
+## Overview
+
+This guide provides step-by-step instructions to set up the project, run the server, execute tests, understand project requirements, and review highlighted changes.
+
+
+## Tech Stack
+
+### Backend
+
+- **Python:** Core programming language for server-side logic.
+- **Flask:** Web framework used for building the backend application.
+- **SQLAlchemy:** Python SQL toolkit and Object-Relational Mapping (ORM) used for database management.
+- **PyJWT:** Python implementation of JSON Web Tokens (JWT) for user authentication.
+- **PostgreSQL:** Relational database management system utilized as the backend database.
+
 
 ### Backend Setup
 
@@ -25,10 +37,7 @@
     pip install -r requirements.txt
     ```
 
-4. **Set up the database:**
-    - Create a PostgreSQL database and configure the connection in `config.py`.
-
-5. **Run Flask application:**
+4. **Run Flask application:**
     ```bash
     flask run
     ```
